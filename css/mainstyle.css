@@ -1,7 +1,8 @@
 
 * { 
 	scroll-behavior: smooth;
-	background-color: black; /* ok so this code is problematic, as it assigns bg colour to divs as well? */
+	background-color: black; /* ok so this code is problematic, 
+	as it assigns bg colour to divs as well? Assign bg colour for every element */
 	}
 
 img{
