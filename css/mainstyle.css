@@ -55,6 +55,14 @@ h1{
 
 }
 
+.h1inverted{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	top: 10%;
+	font-size: 3rem;
+	margin-left: 10%;
+	color: black
+}
+
 h2{
 	font-family: 'karrik-regular';
 	font-size: 2rem;
@@ -99,6 +107,17 @@ div.a {
   	margin-left: 10%;
 	z-index: 2;
 	background-color: #FAF9F6;
+}
+
+/* black text boxes*/
+.textboxblack {
+	border: 1.75px solid black;
+	padding: 3%;
+  	width: 50%;
+	text-align: left;
+	background-color: black;
+	margin-left: 10%;
+  	z-index: 2;
 }
 
 /* textboxes for info*/
