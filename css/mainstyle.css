@@ -1,3 +1,8 @@
+/* To Do
+add h's to breakpoint
+
+*/
+
 * { 
 	scroll-behavior: smooth;
 	background-color: black; /* ok so this code is problematic, 
@@ -48,19 +53,13 @@ Distributed by velvetyne.fr.*/
 
 h1{
 	font-family: Georgia, 'Times New Roman', Times, serif;
-	top: 10%;
 	font-size: 3rem;
+	padding: 3%;
 	margin-left: 10%;
+	margin-top: 0%;
+	border-color: transparent;
 	color: #FAF9F6;
-
-}
-
-.h1inverted{
-	font-family: Georgia, 'Times New Roman', Times, serif;
-	top: 10%;
-	font-size: 3rem;
-	margin-left: 10%;
-	color: black
+	background-color: transparent;
 }
 
 h2{
@@ -80,6 +79,18 @@ p{
 	background-color: transparent;
 	color: #000;
 	
+}
+
+em{
+	background-color: transparent;
+}
+
+.generaltext{
+	padding: 3%;
+	margin-top: -5%;
+	background-color: transparent;
+	margin-left: 10%;
+	position: relative;
 }
 
 .white{
