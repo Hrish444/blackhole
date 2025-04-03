@@ -1,25 +1,95 @@
-
 * { 
 	scroll-behavior: smooth;
 	background-color: black; /* ok so this code is problematic, 
 	as it assigns bg colour to divs as well? Assign bg colour for every element */
 	}
 
-img{
-	object-fit:"cover";
-	height:100%;
-	width:100%;
+ img{
+	background-color: transparent;
 	z-index: 1;
+} 
+
+
+/* BianZhiDai by Xiaoyuan Gao, notyourtypefoundry. 
+Distributed by velvetyne.fr.*/
+@font-face {
+	font-family: 'bianzhidai_base';
+	src: url('/fonts/bianzhidai_base.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'bianzhidai_cloud';
+	src: url('/fonts/bianzhidai_Cloud.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'bianzhidai_ring';
+	src: url('/fonts/bianzhidai_Ring.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'bianzhidai_cube';
+	src: url('/fonts/bianzhidai_Cube.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Karrik by Jean-Baptiste Morizot, Lucas Le Bihan. 
+Distributed by velvetyne.fr.*/
+@font-face {
+	font-family: 'karrik-regular';
+	src: url('/fonts/Karrik-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
 h1{
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	top: 10%;
 	font-size: 3rem;
-	margin-left:10%;
+	margin-left: 10%;
 	color: #FAF9F6;
 
 }
+
+h2{
+	font-family: 'karrik-regular';
+	font-size: 2rem;
+}
+
+h3{
+	font-family: 'karrik-regular';
+	color: #FAF9F6;
+	margin-left:  10%;
+}
+
+p{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	background-color: transparent;
+	color: #000;
+	
+}
+
+.white{
+	color: #FAF9F6;
+	text-align: left;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding: 10%;
+}
+/* For text and titles that need to be centered, they will be under this div*/
+div.a {
+	text-align: center;
+	font-family: "karrik-regular";
+	letter-spacing: 3px;
+	top: 7%;
+	font-size: 3rem;
+	color: #FAF9F6;
+  }  
 
 /* this is for the text boxes in e1*/
 .textbox {
@@ -31,12 +101,84 @@ h1{
 	background-color: #FAF9F6;
 }
 
+/* textboxes for info*/
+.textboxI1 {
+	margin-left: 60%;
+	border: 1.75px solid black;
+	padding: 5%;
+	padding-bottom: 10%;
+	padding-top: 10%;
+	width: 30%;
+	text-align: left;
+	z-index: 2;
+	background-color: #FAF9F6;
+	color: transparent;
+	position: relative;
+}
+.textboxI2 {
+	margin-right: 10%;
+	border: 1.75px solid black;
+	padding: 5%;
+	padding-bottom: 10%;
+	padding-top: 10%;
+	width: 30%;
+	text-align: left;
+	z-index: 2;
+	background-color: #FAF9F6;
+	position: relative;
+}
+
+
+  .basic1 {
+	background-image: url(/images/blackholeinfo1.jpeg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center 50%;
+	position: relative;
+	margin-left: 0%;
+  }
+
+  .lf1{
+	background-image: url(/images/spaceandstars.jpeg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center 50%;
+	position: relative;
+	margin-left: 0%;
+  }
+
+  .lf2{
+	background-image: url(/images/lf1bh.jpeg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center 50%;
+	position: relative;
+	margin-left: 0%;
+  }
+
+  .lf3{
+		background-image: url(/images/supernova.jpeg);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
+		background-position: center 50%;
+		position: relative;
+		margin-left: 0%;
+	  }
+  
+
+  /* For the jump links, add soem sort of indicator that you jumped to them */
+
+
 /* this is for the experience section, made initially for e1*/
 
 /* Breakpoints */
 @media (max-width: 700px) {
 	p{
-		font-family: Arial, Helvetica, sans-serif;
+		font-family: "karrik-regular";
 		font-size: 1rem;
 		line-height: 1.5;
 		color: #000000;
@@ -50,16 +192,49 @@ h1{
 			z-index: 2;
 			background-color: #FAF9F6;
 	  }
+	  
 }
 
-@media (min-width: 701px){	
+@media (min-width: 600px){	
 p{
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "karrik-regular";
 	font-size: 1.25rem;
 	line-height: 1.5;
 	color: #000000;
 	background-color: #FAF9F6;
 	} 
+	  /*Sidebar for experience pages, when smaller, it will be in the dropdown*/
+	  .sidenav {
+		border: 1.75px solid #f00000;
+		margin-left: 3%;
+		margin-top: 14%;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		color: #000;
+		background-color: #FAF9F6;
+		overflow-x: hidden;
+		padding-bottom: 1.25%;
+		z-index: 2;
+	  }
+	  
+	  .sidenav a {
+		font-family: Georgia, 'Times New Roman', Times, serif;
+		margin-left: -22%;
+		position: relative;
+		padding: 15px 6px 6px 30px;
+		text-decoration: none;
+		font-size: 1.5rem;
+		background-color: #FAF9F6;
+		color: #000000;
+		display: block;
+		z-index: 2;
+	  }
+	  
+	  .sidenav a:hover {
+		color: #F0D760;
+	  }
 
 }
 
@@ -89,47 +264,33 @@ p{
 	transform: translate(-50%, -50%);
   }
 
-  /*Sidebar for experience pages */
-  .sidenav {
-	border: 1.75px solid #f00000;
-	margin-left: 3%;
-	margin-top: 14%;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	color: #000;
-	background-color: #FAF9F6;
-	overflow-x: hidden;
-	padding-bottom: 1.25%;
-  }
-  
-  .sidenav a {
-	font-family: Georgia, 'Times New Roman', Times, serif;
-	margin-left: -22%;
-	position: relative;
-	padding: 15px 6px 6px 30px;
-	text-decoration: none;
-	font-size: 1.5rem;
-	background-color: #FAF9F6;
-	color: #000000;
-	display: block;
-  }
-  
-  .sidenav a:hover {
-	color: #F0D760;
-  }
 
+/* Dropdown menu*/
+  .box {
+        width: 120px;
+        height: 30px;
+        border: 1px solid #999;
+        font-size: 18px;
+        color: #1c87c9;
+        background-color: #eee;
+        border-radius: 5px;
+        box-shadow: 4px 4px #ccc;
+      }
   
   /*for homepage buttons */
   .grid-container {
+	z-index: 2;
+	background-color: transparent;
 	display: grid;
+	place-items: center;
+	height: 100vh;
 	grid-template-columns: auto auto auto;
 	gap: 10px;
 	padding: 10px;
   }
 
   .grid-container > div {
+	background-color: transparent;
 	text-align: center;
 	padding: 1% 1%;
 	font-size: 1.5rem;
