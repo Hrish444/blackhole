@@ -179,9 +179,9 @@ div.a {
 	position: relative;
 }
 
-
+/*
   .basic1 {
-	background-image: url(images/blackholeinfo1.jpeg);
+	background-image: url(/images/blackholeinfo1.jpeg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
@@ -219,7 +219,8 @@ div.a {
 		position: relative;
 		margin-left: 0%;
 	  }
-  
+	
+  Coded out and put in internal, for image deployment reasons
 
   /* For the jump links, add soem sort of indicator that you jumped to them */
 
