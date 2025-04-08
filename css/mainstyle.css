@@ -47,7 +47,7 @@ Distributed by velvetyne.fr.
 Distributed by velvetyne.fr.*/
 @font-face {
 	font-family: 'karrik-regular';
-	src: url('/fonts/Karrik-Regular.woff') format('woff');
+	src: url('../fonts/Karrik-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
