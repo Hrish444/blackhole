@@ -45,6 +45,7 @@ Distributed by velvetyne.fr.
 
 /* Karrik by Jean-Baptiste Morizot, Lucas Le Bihan. 
 Distributed by velvetyne.fr.*/
+
 @font-face {
 	font-family: 'karrik-regular';
 	src: url('../fonts/Karrik-Regular.woff') format('woff');
@@ -79,7 +80,6 @@ p{
 	font-size: 1rem;
 	background-color: transparent;
 	color: #000;
-	
 }
 
 em{
@@ -137,20 +137,12 @@ div.a {
   	padding: 3%;
 	width: 30%;
   	margin-left: 10%;
-	z-index: 2;
+	z-index: 3;
 	background-color: #FAF9F6;
+	position: relative;
+	top: 20%;
 }
 
-/* black text boxes*/
-.textboxblack {
-	border: 1.75px solid black;
-	padding: 3%;
-  	width: 50%;
-	text-align: left;
-	background-color: black;
-	margin-left: 10%;
-  	z-index: 2;
-}
 
 /* textboxes for info*/
 .textboxI1 {
@@ -228,7 +220,7 @@ div.a {
 /* this is for the experience section, made initially for e1*/
 
 /* Breakpoints */
-@media (max-width: 700px) {
+@media (max-width: 700px) { /*for mobile */
 	p{
 		font-family: "karrik-regular";
 		font-size: 1rem;
@@ -245,9 +237,21 @@ div.a {
 			background-color: #FAF9F6;
 	  }
 	  
+	  .advancebtn {
+		font-size: 0.8rem;
+	  }
+
+	  h1{
+		font-size: 1.75rem;
+	}
+	
+	h2{
+		font-size: 1.75rem;
+	}
+	
 }
 
-@media (min-width: 600px){	
+@media (min-width: 600px){ /*for mobile */
 p{
 	font-family: "karrik-regular";
 	font-size: 1.25rem;
@@ -287,6 +291,8 @@ p{
 	  .sidenav a:hover {
 		color: #F0D760;
 	  }
+	  
+	
 
 }
 
@@ -300,11 +306,12 @@ p{
 	background-color: #F0D760;
 	border: 1.75px solid #f00000;
 	cursor: pointer;
-	z-index: 4;
+	z-index: 5;
 }
 .advancebtn:hover {
 	background-color: #F00000;
 	color: #FAF9F6;
+	z-index: 5;
   }
 
   /* div to center buttons (advancebtns), maybe probably likely will change*/
@@ -315,6 +322,7 @@ p{
 	left: 50%;
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
+	z-index: 5;
   }
 
 
@@ -325,7 +333,7 @@ p{
 	margin-left: 1%;
     position: relative;
     display: inline-block;
-    z-index: 3;
+    z-index: 5;
 	position: fixed;
 	background-color: transparent;
 }
@@ -343,7 +351,7 @@ p{
     background-color: #FAF9F6;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 5;
 }
 
 .dropdown-content a {
