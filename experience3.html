@@ -8,15 +8,27 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>spaghettification</title>
 	<link rel="stylesheet" href="css/mainstyle.css">
+
+	 <style> 
+		p {letter-spacing: 20px;}
+		.advancebtn {letter-spacing: 10px;}
+		h1{transform: rotate(2deg); color: black;}
+		.textbox{transform: rotate(1deg);}
+		.center{transform: rotate(-7deg);}
+		@media (max-width: 400px) { /*for mobile becasue this one would be very hard to read*/
+			p {font-size: .75rem;line-height: 1.5;letter-spacing: 10px;}
+			.advancebtn {letter-spacing: 3px;}
+		} 
+	 </style>
 </head>
 
 <body >
 	<div class="dropdown">
 		<button class="dropdown-btn">
-			<img src="images/spacepng.png" width="80px" height="auto">
+			<img src="images/spacepng.png" width="80px" height="auto" alt="pixelated image of a black hole, representing the home button">
 		</button>
 		<div class="dropdown-content">
-			<a href="info1.html">Info</a>
+			<a href="info1.html">Information</a>
 			<a href="significance1.html">Significance</a>
 			<a href="experience1.html">Experience</a>
 			<a href="index.html">Home</a>
@@ -34,19 +46,21 @@
 
 		<h1>3. Spaghettification</h1>
 
-		<div class="textbox"><p>You lose control, you are being violently pulled into its center. 
+		<div class="textbox"><p>
+			You lose control, you are being violently pulled into its center. 
 			Your body starts stretching into the black hole, you are being pulled so strongly, 
 			you begin to lengthen into a long distance. Your feet and head are miles apart, 
 			but still attached. In any normal circumstances you would have died by now, but 
 			you somehow resist going unconscious. Do you resist and venture further?
 		</p></div>
+
 	
 			<div class="center">
 				<button onclick ="document.location='experience4.html'"; class="advancebtn">Resist</button>
 			</div>
 			
-			<img src="images/blackhole_e3.png" width="170%" height="auto" alt="pixelated image of a black hole"
-		style="position: fixed;right: 0%; top: 10%;overflow: hidden;transform: rotate(0deg);">
+			<img src="images/e3blackhole.jpg" width="100%" height="auto" alt="painted rendition of a black hole, with stars smattered in the background, even further zoomed in and more intense is colour saturation"
+			style="position:fixed; top:-60%; left:-150%; width:300vw; height:300vh; object-fit:cover; z-index:-1;">
 	
 	
 			<!-- Sidebar -->

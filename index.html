@@ -8,6 +8,33 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Falling into a Black Hole</title>
 		<link rel="stylesheet" href="css/mainstyle.css">
+        <style>
+            img{
+                position:fixed; 
+                top:60%; 
+                left:50%; 
+                transform:translate(-50%, -50%); 
+                width:100vw; 
+                height:100vh; 
+                object-fit:contain; 
+                z-index:-1;
+            }
+            h2{font-size: 5rem;}
+
+            @media (max-width: 600px) { /*for mobile becasue this one would be very hard to read*/
+            h2 {font-size: 4rem;}
+            img{
+                position:fixed; 
+                top:60%; 
+                left:50%; 
+                transform:translate(-50%, -50%); 
+                width:400vw; 
+                height:400vh; 
+                object-fit:contain; 
+                z-index:-1;
+            }
+            }                 
+        </style>
 	</head>
 
 <!--Meat!!mmmm...(body) --> 
@@ -16,23 +43,22 @@
         <h2>Falling into a Black Hole</h2>
         </div>
 	</body>
-	
-    <img src="images/spacepng.png" width="90%" height="90%">
 
-	<div class="grid-container">
-        <div class="item1">
-            <div class="relative">
-		        <button onclick ="document.location='experience1.html'"; class="btn1">Experience</button>
-            </div>
-        </div>
-        <div class="item2">
-            <button onclick ="document.location='significance1.html'"; class="btn1">Significance</button>
-        </div>
-        <div class="item3">
-            <button onclick ="document.location='info1.html'"; class="btn1">Info</button>
-        </div>
+    <!--credits to https://codepen.io/rishi111/pen/yyLNKbZ for the flexbox-->
+    <div class="container">
+        <button class="element align-end" onclick="document.location='significance1.html'">
+            Significance
+        </button>
+
+        <button class="element align-center" onclick="document.location='experience1.html'">
+            Experience
+        </button>
+
+        <button class="element align-start" onclick="document.location='info1.html'">
+            Information
+        </button>
     </div>
-
-    <div><a href="about.html">About</a></div>
+	
+    <img src="images/spacepng.png" alt="pixelated image of a black hole, representing the home page" >
 
 </html>

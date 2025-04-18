@@ -6,9 +6,11 @@ addfigcaption to breakpoint
 
 * { 
 	scroll-behavior: smooth;
-	background-color: black; /* ok so this code is problematic, 
-	as it assigns bg colour to divs as well? Assign bg colour for every element */
-	}
+}
+
+body {
+	background-color: black;
+}
 
  img{
 	background-color: transparent;
@@ -62,6 +64,8 @@ h1{
 	border-color: transparent;
 	color: #FAF9F6;
 	background-color: transparent;
+	position: relative;
+	z-index: 2;
 }
 
 h2{
@@ -80,6 +84,7 @@ p{
 	font-size: 1rem;
 	background-color: transparent;
 	color: #000;
+	line-height: 1.5;
 }
 
 em{
@@ -95,6 +100,7 @@ figcaption{
 	font-family: 'karrik-regular';
 	font-size: 0.75rem;
 	font-style: oblique;
+	color: #000;
 
 }
 
@@ -114,6 +120,8 @@ a{
 
 }
 
+/* code for the info portion*/
+
 .white{
 	color: #FAF9F6;
 	text-align: left;
@@ -121,6 +129,46 @@ a{
 	margin-right: 10%;
 	padding: 10%;
 }
+.white img {
+	border: 2px solid #ffffff;
+	border-radius: 5px;
+	
+}
+.white p {
+	padding: 5%;
+}
+
+.map-wrapper {
+width: 100%;
+max-width: 1920px; /* image width */
+position: relative;
+}
+
+.map-wrapper img {
+width: 100%;
+height: auto;
+}
+ 
+
+@keyframes glow { /* i made the anatomy glow when you jump to it, but it is jumpy */
+0% {
+	text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+	color: #fff;						
+}
+50% {
+	text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff;
+	color: #fff;
+}
+100% {
+	text-shadow: none;
+	color: inherit;
+}
+}
+
+.white h2:target {
+animation: glow 3s ease-out;
+}
+
 /* For text and titles that need to be centered, they will be under this div*/
 div.a {
 	text-align: center;
@@ -171,60 +219,14 @@ div.a {
 	position: relative;
 }
 
-/*
-  .basic1 {
-	background-image: url(/images/blackholeinfo1.jpeg);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	background-position: center 50%;
-	position: relative;
-	margin-left: 0%;
-  }
 
-  .lf1{
-	background-image: url(/images/spaceandstars.jpeg);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	background-position: center 50%;
-	position: relative;
-	margin-left: 0%;
-  }
-
-  .lf2{
-	background-image: url(/images/lf1bh.jpeg);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	background-position: center 50%;
-	position: relative;
-	margin-left: 0%;
-  }
-
-  .lf3{
-		background-image: url(/images/supernova.jpeg);
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-size: cover;
-		background-position: center 50%;
-		position: relative;
-		margin-left: 0%;
-	  }
-	
-  Coded out and put in internal, for image deployment reasons
-
-  /* For the jump links, add soem sort of indicator that you jumped to them */
-
-
-/* this is for the experience section, made initially for e1*/
 
 /* Breakpoints */
-@media (max-width: 700px) { /*for mobile */
+@media (max-width: 600px) { /*for mobile */
 	p{
 		font-family: "karrik-regular";
-		font-size: 1rem;
-		line-height: 1.5;
+		font-size: .75rem;
+		line-height: 1.25;
 		color: #000000;
 		background-color: #FAF9F6;
 		} 
@@ -248,10 +250,16 @@ div.a {
 	h2{
 		font-size: 1.75rem;
 	}
+
+	.white img {/*for mobile becasue the images run off the page*/
+		scale: 0.75;
+		margin: 0%;
+		transform:translate(-35%, -0%);
+		}
 	
 }
 
-@media (min-width: 600px){ /*for mobile */
+@media (min-width: 600px){ 
 p{
 	font-family: "karrik-regular";
 	font-size: 1.25rem;
@@ -408,54 +416,66 @@ p{
 		display: none;
 	}
 }
-	
-  
-  /*for homepage buttons */
-  .grid-container {
+
+/* credits to https://codepen.io/rishi111/pen/yyLNKbZ for the flexbox*/
+.container {
+	display: flex;
+	/* Only for styling */
+	height: 20vh;
+	position:fixed; 
+	top:60%; 
+	left:50%; 
+	transform:translate(-50%, -50%);
 	z-index: 2;
-	background-color: transparent;
-	display: grid;
-	place-items: center;
-	height: 100vh;
-	grid-template-columns: auto auto auto;
-	gap: 10px;
-	padding: 10px;
   }
-
-  .grid-container > div {
-	background-color: transparent;
-	text-align: center;
-	padding: 1% 1%;
-	font-size: 1.5rem;
-  }
-
-  div.relative {
-	position: relative;
-	left: 0px;
   
+  .align-center {
+	align-self: center; /* Vertically center the flex item within its container */
   }
-
-  .item1 {
-	grid-row-start: 1;
-	grid-row-end: 3;
+  
+  .align-start {
+	align-self: start;
   }
-
-   .btn1 {
+  
+  .align-end {
+	align-self: end;
+  }
+  
+  /* Only for styling */
+  .element {
+	margin: 0 auto; /* Horizontally center the item */
+	color: white;
+	height: 50px;
+	width: 200px;
+	text-align: center;
 	font-size: 150%;
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	padding: 10px 20px;
-	margin: 5px;
+	margin: 20px;
 	background-color: #FAF9F6;
 	color: rgb(0, 0, 0);
 	border: 1.5px solid black;
 	border-color: black;
 	cursor: pointer;
-	text-align: center;
   }
-	.btn1:hover {
+
+  .element:hover {
 	border: 1.5px solid black;
 	background-color: #7f7e7c;
+  } 
+
+
+
+
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      gap: 30px;
+      height: auto;
+    }
   }
+  
+  
  
 
 
