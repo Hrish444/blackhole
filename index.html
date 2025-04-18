@@ -9,6 +9,7 @@
 		<title>Falling into a Black Hole</title>
 		<link rel="stylesheet" href="css/mainstyle.css">
         <style>
+            /* Internal because this page is different when scaled, and image and heading treatments are different */
             img{
                 position:fixed; 
                 top:60%; 
@@ -21,7 +22,29 @@
             }
             h2{font-size: 5rem;}
 
-            @media (max-width: 600px) { /*for mobile becasue this one would be very hard to read*/
+            /*a declaration because I only want links to look  like this on this page */
+            a{
+                position: fixed;
+                margin: 0 auto;
+                left: 50%;
+                transform: translateX(-50%);
+                color: white;
+                bottom: 5%;
+                height: 20px;
+                width: 80px;
+                text-align: center;
+                font-size: 100%;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                padding: 5px 10px;
+                background-color: #FAF9F6;
+                color: rgb(0, 0, 0);
+                border: 1.5px solid black;
+                border-color: black;
+                cursor: pointer;
+            
+            }
+
+            @media (max-width: 600px) { /*for mobile becasue this one would be very hard to read, and the image getting bigger on mobile*/
             h2 {font-size: 4rem;}
             img{
                 position:fixed; 
@@ -37,12 +60,15 @@
         </style>
 	</head>
 
-<!--Meat!!mmmm...(body) --> 
+
     <body>
         <div class="a">
         <h2>Falling into a Black Hole</h2>
         </div>
 	</body>
+
+    <!--i tried the rotating carousel, but the scss is too different to work with in such a small timeframe
+    I would rather stick to ol reliable. --> 
 
     <!--credits to https://codepen.io/rishi111/pen/yyLNKbZ for the flexbox-->
     <div class="container">
@@ -61,4 +87,6 @@
 	
     <img src="images/spacepng.png" alt="pixelated image of a black hole, representing the home page" >
 
+    
+    <a href="attribution.html">Attribution</a>
 </html>

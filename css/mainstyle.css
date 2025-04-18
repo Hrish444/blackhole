@@ -1,9 +1,7 @@
-/* To Do
-add h's to breakpoint
-addfigcaption to breakpoint
 
-*/
 
+
+/* global declarations for stuff that occurs in all (or) most pages, and or codes that keeps aspects of attribuutes a certain way */
 * { 
 	scroll-behavior: smooth;
 }
@@ -16,38 +14,7 @@ body {
 	background-color: transparent;
 	z-index: 1;
 } 
-
-
-/* BianZhiDai by Xiaoyuan Gao, notyourtypefoundry. 
-Distributed by velvetyne.fr.
-@font-face {
-	font-family: 'bianzhidai_base';
-	src: url('/fonts/bianzhidai_base.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'bianzhidai_cloud';
-	src: url('/fonts/bianzhidai_Cloud.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'bianzhidai_ring';
-	src: url('/fonts/bianzhidai_Ring.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'bianzhidai_cube';
-	src: url('/fonts/bianzhidai_Cube.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-} */
-
-/* Karrik by Jean-Baptiste Morizot, Lucas Le Bihan. 
-Distributed by velvetyne.fr.*/
-
+/* Karrik by Jean-Baptiste Morizot, Lucas Le Bihan. Distributed by velvetyne.fr.*/
 @font-face {
 	font-family: 'karrik-regular';
 	src: url('../fonts/Karrik-Regular.woff') format('woff');
@@ -80,7 +47,7 @@ h3{
 }
 
 p{
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'karrik-regular';
 	font-size: 1rem;
 	background-color: transparent;
 	color: #000;
@@ -121,7 +88,6 @@ a{
 }
 
 /* code for the info portion*/
-
 .white{
 	color: #FAF9F6;
 	text-align: left;
@@ -179,7 +145,7 @@ div.a {
 	color: #FAF9F6;
   }  
 
-/* this is for the text boxes in e1*/
+/* this is for the text boxes in the experience section*/
 .textbox {
   	border: 1.75px solid black;
   	padding: 3%;
@@ -221,7 +187,7 @@ div.a {
 
 
 
-/* Breakpoints */
+/* Breakpoints, font sizes and the dropdown adjustment */
 @media (max-width: 600px) { /*for mobile */
 	p{
 		font-family: "karrik-regular";
@@ -267,7 +233,7 @@ p{
 	color: #000000;
 	background-color: #FAF9F6;
 	} 
-	  /*Sidebar for experience pages, when smaller, it will be in the dropdown*/
+	  /*Sidebar for experience pages, when smaller, it will be in the dropdown, and the dropdown will be the whole page to make it easier to use*/
 	  .sidenav {
 		border: 1.75px solid #f00000;
 		margin-left: 3%;
@@ -322,7 +288,7 @@ p{
 	z-index: 5;
   }
 
-  /* div to center buttons (advancebtns), maybe probably likely will change*/
+  /* div to center buttons */
   .center {
 	background-color: transparent;
 	position: fixed;
@@ -334,8 +300,8 @@ p{
   }
 
 
-/* Dropdown menu*/
 
+/* Dropdown menu (non mobile)*/
 .dropdown {
 	margin-top: 30px;
 	margin-left: 1%;
@@ -379,7 +345,7 @@ p{
     display: block;
 }
 
-/* Hide mobile link*/
+/* Hides mobile dropdown links, when above 600px*/
 .mobile-only {
     display: none;
 }
@@ -405,7 +371,7 @@ p{
         display: block;
     }
 
-    /* Add a separator between main and mobile-only links */
+    /* Adds a space between main and mobile links */
     .mobile-only {
         border-top: 1px solid rgba(255,255,255,0.2);
         margin-top: 20px;
@@ -417,7 +383,8 @@ p{
 	}
 }
 
-/* credits to https://codepen.io/rishi111/pen/yyLNKbZ for the flexbox*/
+/*Home page layout
+ credits to https://codepen.io/rishi111/pen/yyLNKbZ for the flexbox*/
 .container {
 	display: flex;
 	/* Only for styling */
