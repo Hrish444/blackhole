@@ -1,7 +1,8 @@
 
 
 
-/* global declarations for stuff that occurs in all (or) most pages, and or codes that keeps aspects of attribuutes a certain way */
+/* global declarations for stuff that occurs in all (or) most pages, and or codes that keeps aspects of attribuutes a certain way
+some stuff like type is set pretty default, but chnages based on the environment */
 * { 
 	scroll-behavior: smooth;
 }
